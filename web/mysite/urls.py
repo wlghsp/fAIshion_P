@@ -11,11 +11,13 @@ urlpatterns = [
     path('clothings/', views.clothing_list, name='clothing_list'),
     path('clothings/upload/', views.upload_clothing, name='upload_clothing'),
     path('clothings/<int:pk>/', views.delete_clothing, name='delete_clothing'),
+    path('coordinate/<int:pk>/',
+         views.coorinate_clothing, name='coordinate_clothing'),
 
-    path('class/clothings/', views.ClothingListView.as_view(),
-         name='class_clothing_list'),
-    path('class/clothings/upload/', views.UploadClothingView.as_view(),
-         name='class_upload_clothing'),
+    #     path('class/clothings/', views.ClothingListView.as_view(),
+    #          name='class_clothing_list'),
+    #     path('class/clothings/upload/', views.UploadClothingView.as_view(),
+    #          name='class_upload_clothing'),
 
     path('admin/', admin.site.urls),
 ]
