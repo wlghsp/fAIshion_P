@@ -1,3 +1,26 @@
 body {
   background-color: #5c848e;
 }
+
+#coordinate {
+	border: solid 1px #FFFFFF;
+	border-radius: 10px;
+	width: 910px;
+	min-height: 340px;
+	background: #ebebeb;
+	padding: 10px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#item {
+	width: 200px;
+	float: left;
+	margin: 0 13px;
+	text-align: center;
+}
+
+#item img {
+	width: 190px;
+	height: 200px;
+}
