@@ -1,7 +1,9 @@
 body {
   background-color: #5c848e;
 }
-
+div#front{
+	margin: 5px 0 5px 20px;
+}
 #coordinate {
 	border: solid 1px #FFFFFF;
 	border-radius: 10px;

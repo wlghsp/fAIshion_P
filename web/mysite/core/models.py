@@ -11,3 +11,9 @@ class Clothing(models.Model):
     def delete(self, *args, **kwargs):
         self.image.delete()
         super().delete(*args, **kwargs)
+
+
+class CoordinateClothing(models.Model):
+    c_kind = models.IntegerField()
+    c_image = models.ImageField(blank=True)
+    c_url = models.CharField(max_length=200, blank=True)

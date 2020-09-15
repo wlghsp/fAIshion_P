@@ -12,7 +12,7 @@ urlpatterns = [
     path('clothings/upload/', views.upload_clothing, name='upload_clothing'),
     path('clothings/<int:pk>/', views.delete_clothing, name='delete_clothing'),
     path('coordinate/<int:pk>/',
-         views.coorinate_clothing, name='coordinate_clothing'),
+         views.coordinate_clothing, name='coordinate_clothing'),
 
     #     path('class/clothings/', views.ClothingListView.as_view(),
     #          name='class_clothing_list'),
