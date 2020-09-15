@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h2 class="card-title">코디 추천</h2>
+  <div id="coordinate">
+    {% for recommend_img_url in recommend_img_url_list %}
+        <div id="item">
+            <img alt="coordinate" src="{{recommend_img_url.image }}">
+            <a href="{{ recommend_img_url.url }}" class="btn btn-primary btn-sm" target="_blank">
+              상품 보러 가기
+            </a>
+        </div>
+    {% endfor %}
+  </div>
+{% endblock %}

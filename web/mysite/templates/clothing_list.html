@@ -30,9 +30,10 @@
           </td>
           <td>{{ clothing.title }}</td>
           <td>
-            <a href="" class="btn btn-primary btn-sm" target="_blank">
-              코디 추천 받기
-            </a>
+           <form method="post" action="{% url 'coordinate_clothing' clothing.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary btn-sm">코디 추천 받기</button>
+            </form>
           </td>
           <td>
             <form method="post" action="{% url 'delete_clothing' clothing.pk %}">
