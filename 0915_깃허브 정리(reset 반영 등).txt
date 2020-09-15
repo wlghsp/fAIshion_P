@@ -34,11 +34,21 @@
 # git pull origin master // 또는 git pull master
  
 
+git add 취소하기 
+git reset HEAD [파일이름]   // 파일이름을 안 적으면 전체 취소
+
+git push origin <자기브랜치>  까지 한 후(master 브랜치와 merge하기 전) reset 하기
+# git log --oneline  -10  // commit 코드 한줄로 확인 10개까지 본다. 
+# git reset --hard <돌아 가고 싶은 커밋번호>
+아직 master 브랜치와 merge를 하지 않아 git push -f origin master 필요 없음 . 
+
+
+
 되돌리기 (reset, revert)-- 구글링 해서 자세한 내용 알아 보고 진행할 것
 Reset은 시계를 다시 맞추듯이 이력과 코드를 그 당시로 되돌리는 것
 Revert는 이전 이력은 그대로 두고, 그 되돌릴 커밋의 코드만 원복시킵니다
 # git log --oneline  -10 // commit 코드 한줄로 확인 10개까지 본다. 
-# git reset <옵션:--hard, soft, mixed 중 선택> <돌아 가고 싶은 커밋번호>
+# git reset --hard <돌아 가고 싶은 커밋번호>
 (# git revert <되돌릴 커밋> ) 
 # git push -f origin master // 돌아간 커밋 상태를 강제로 푸시함. 
  
