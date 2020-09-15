@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
-  <h2 class="card-title">코디 추천</h2>
-  <div id="coordinate">
-    {% for recommend_img_url in recommend_img_url_list %}
-        <div id="item">
-            <img alt="coordinate" src="{{recommend_img_url.image }}">
-            <a href="{{ recommend_img_url.url }}" class="btn btn-primary btn-sm" target="_blank">
-              상품 보러 가기
-            </a>
+<h2 class="card-title">오늘부터 당신도 패피</h2>
+<div id="container" style="display: flex; justify-content: center" >
+{% for coordinateImage in coordinateImages %}
+    <div id="item" style="padding: 0 40px">
+        <div style="display: flex; flex-direction: column">
+            <img alt="coordinate" src="{{ coordinateImage.c_image.url }}" style="width:200px;">
+            <div style="margin: 20px auto;">
+                <a href="{{ coordinateImage.c_url }}" class="btn btn-primary btn-sm" target="_blank">상품 보러 가기</a>
+            </div>
         </div>
-    {% endfor %}
-  </div>
+    </div>
+{% endfor %}
+</div>
 {% endblock %}
