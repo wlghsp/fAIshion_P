@@ -39,65 +39,35 @@ class fashion_tools(object):
 
 
 
-
-
 def recommend(predict_idx):
     # 0이 t-shirt 라는 가정
     if predict_idx == 0:
+        coordinateImages = CoordinateClothing.objects.raw('''
+                            SELECT * FROM core_coordinateclothing WHERE c_kind = 0 ORDER BY random() LIMIT 3
+                            ''')
+        result = []
+        kind = "티셔츠"
+        result.append(coordinateImages)
+        result.append(kind)
 
-        coordinateImages = CoordinateClothing.objects.filter(c_kind=predict_idx)
+        return result
 
-        return coordinateImages
-
-    # 아직 미완성...
     elif predict_idx == 1:
-        # t_shirt_path = glob.glob("경로설정")
-
-        # # 코디 예시 사진과 url은 (브랜드 - 질 스튜어트 뉴욕)
-        # t_shirt_cody_url_list = ["url 따오기"]
-
-        # t_shirt_img_url_list = []
-
-        # for idx, img in enumerate(t_shirt_path):
-        #     t_shirt = cv2.imread(img)
-        #     t_shirt_img_url_list.append([t_shirt, t_shirt_cody_url_list[idx]])
         pass
 
+    # 셔츠
     elif predict_idx == 2:
-        # t_shirt_path = glob.glob("경로설정")
-
-        # # 코디 예시 사진과 url은 (브랜드 - 질 스튜어트 뉴욕)
-        # t_shirt_cody_url_list = ["url 따오기"]
-
-        # t_shirt_img_url_list = []
-
-        # for idx, img in enumerate(t_shirt_path):
-        #     t_shirt = cv2.imread(img)
-        #     t_shirt_img_url_list.append([t_shirt, t_shirt_cody_url_list[idx]])
-        pass
+        coordinateImages = CoordinateClothing.objects.raw('''
+                            SELECT * FROM core_coordinateclothing WHERE c_kind = 2 ORDER BY random() LIMIT 3
+                            ''')
+        result = []
+        kind = "셔츠"
+        result.append(coordinateImages)
+        result.append(kind)
+        return result
 
     elif predict_idx == 3:
-        # t_shirt_path = glob.glob("경로설정")
-
-        # # 코디 예시 사진과 url은 (브랜드 - 질 스튜어트 뉴욕)
-        # t_shirt_cody_url_list = ["url 따오기"]
-
-        # t_shirt_img_url_list = []
-
-        # for idx, img in enumerate(t_shirt_path):
-        #     t_shirt = cv2.imread(img)
-        #     t_shirt_img_url_list.append([t_shirt, t_shirt_cody_url_list[idx]])
         pass
 
     elif predict_idx == 4:
-        # t_shirt_path = glob.glob("경로설정")
-
-        # # 코디 예시 사진과 url은 (브랜드 - 질 스튜어트 뉴욕)
-        # t_shirt_cody_url_list = ["url 따오기"]
-
-        # t_shirt_img_url_list = []
-
-        # for idx, img in enumerate(t_shirt_path):
-        #     t_shirt = cv2.imread(img)
-        #     t_shirt_img_url_list.append([t_shirt, t_shirt_cody_url_list[idx]])
         pass
