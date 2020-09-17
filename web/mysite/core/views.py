@@ -47,12 +47,8 @@ def delete_clothing(request, pk):
 def coordinate_clothing(request, pk):
     if request.method == 'POST':
         # clothing = Clothing.objects.get(pk=pk)
-        # # 모델 임포트 후 의상 부분만 추출하는 코드.
-        # # GPU메모리 증가 허용하기 코드
-        # config = tf.compat.v1.ConfigProto()
-        # config.gpu_options.allow_growth = True
-        # session = tf.compat.v1.InteractiveSession(config=config)
         #
+        # # 모델 임포트 후 의상 부분만 추출하는 코드.
         # # 훈련된 모델 가지고 오는 경로 설정.
         # saved = keras.models.load_model('./mysite/core/train_models/topwears.h5', compile=False, custom_objects={'tf': tf})
         # f = '.' + clothing.image.url
@@ -85,7 +81,7 @@ def coordinate_clothing(request, pk):
         # input_image = np.reshape(input_image, (1, 28, 28, 1))
         #
         # # 저장된 훈련모델 불러오는 방법
-        # model = keras.models.load_model('./mysite/core/train_models/my_model.h5', compile=False, custom_objects={'tf': tf})
+        # model = keras.models.load_model('./mysite/core/train_models/fAIshin_P_T6.h5', compile=False, custom_objects={'tf': tf})
         #
         # # 예측 수행
         # input_predict = model.predict(input_image) + 1
@@ -99,26 +95,15 @@ def coordinate_clothing(request, pk):
         # ## 여기까지 오케이 ^_^
         #
         # # recommend return 값 받기
-        # coordinateImages = recommend(predict_idx)
-        coordinateImages = recommend(0)
+        # result = recommend(predict_idx)
+        result = recommend(2)
 
-        # # 랜덤초이스방법
-        # random_choice = random.choice(recommend_img_url_list)
-        # random_img, random_url = random_choice
-        #
-        # # 3가지 종류 그냥 출력해주기.
-        # recommend_img_list = []
-        # recommend_url_list = []
-        # for img, url in recommend_img_url_list:
-        #     recommend_img_list.append(img)
-        #     recommend_url_list.append(url)
-        #
-        # # 이미지 변수 하나에 담기
-        # recommend_img1, recommend_img2, recommend_img3 = recommend_img_list
-        # # url 변수 하나에 담기
-        # recommend_url1, recommend_url2, recommend_url3 = recommend_url_list
+        coordinateImages= result[0]
+        clothing_kind = result[1]
+
 
         context = {
+            'clothing_kind': clothing_kind,
             'coordinateImages': coordinateImages
 
         }
