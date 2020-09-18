@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
-import glob
 import tensorflow as tf
-from .models import Clothing, CoordinateClothing
+from .models import CoordinateClothing
+from PIL import ImageOps
 
 class fashion_tools(object):
     def __init__(self, imageid, model, version=1.1):
@@ -15,7 +15,8 @@ class fashion_tools(object):
         """takes input rgb ----> return PNG"""
 
         name = self.imageid
-        file = cv2.imread(name)
+        file = name
+        # file = cv2.imread(name)
         file = tf.image.resize_with_pad(file, target_height=512, target_width=512)
         rgb = file.numpy()
         file = np.expand_dims(file, axis=0) / 255.
@@ -39,6 +40,18 @@ class fashion_tools(object):
 
 
 
+# 이미지 패딩값 주는 코드
+def resize_with_padding(img, expected_size):
+    img.thumbnail((expected_size[0], expected_size[1]))
+    # print(img.size)
+    delta_width = expected_size[0] - img.size[0]
+    delta_height = expected_size[1] - img.size[1]
+    pad_width = delta_width // 2
+    pad_height = delta_height // 2
+    padding = (pad_width, pad_height, delta_width - pad_width, delta_height - pad_height)
+    return ImageOps.expand(img, padding)
+
+
 def recommend(predict_idx):
     # 0이 t-shirt 라는 가정
     if predict_idx == 0:
@@ -46,14 +59,21 @@ def recommend(predict_idx):
                             SELECT * FROM core_coordinateclothing WHERE c_kind = 0 ORDER BY random() LIMIT 3
                             ''')
         result = []
-        kind = "티셔츠"
+        kind = "후드티"
         result.append(coordinateImages)
         result.append(kind)
 
         return result
 
     elif predict_idx == 1:
-        pass
+        coordinateImages = CoordinateClothing.objects.raw('''
+                                    SELECT * FROM core_coordinateclothing WHERE c_kind = 1 ORDER BY random() LIMIT 3
+                                    ''')
+        result = []
+        kind = "맨투맨"
+        result.append(coordinateImages)
+        result.append(kind)
+        return result
 
     # 셔츠
     elif predict_idx == 2:
@@ -67,7 +87,14 @@ def recommend(predict_idx):
         return result
 
     elif predict_idx == 3:
-        pass
+        coordinateImages = CoordinateClothing.objects.raw('''
+                                    SELECT * FROM core_coordinateclothing WHERE c_kind = 3 ORDER BY random() LIMIT 3
+                                    ''')
+        result = []
+        kind = "티셔츠"
+        result.append(coordinateImages)
+        result.append(kind)
+        return result
 
     elif predict_idx == 4:
         pass
