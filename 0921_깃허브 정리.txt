@@ -59,6 +59,20 @@ Revert는 이전 이력은 그대로 두고, 그 되돌릴 커밋의 코드만 �
 (# git stash && git pull origin master && git stash pop // 위 세줄 한번에 실행) 
 출처: https://goddaehee.tistory.com/253
 
+★ GitHub 100MB 이상 파일 업로드
+#git lfs를 설치해줍니다.
+git lfs install
+
+#""부분에 100MB이상 파일을 써주시면 됩니다.
+git lfs track "*.psd"
+
+#평소 git push 하는 것처럼 해주시면 됩니다.
+git add .
+git commit -m "Add design file"
+git push origin master
+
+
+
 
 ★ gitignore 간단히 생성
 gitignore.io 라는 사이트에서 프레임워크 및 사용하고 있는 에디터, ide명을 적으면 자동으로 ignore할 목록이 작성된다.
