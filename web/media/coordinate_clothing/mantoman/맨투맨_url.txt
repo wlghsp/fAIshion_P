@@ -1,0 +1,12 @@
+맨투맨 url
+
+output1) https://www.ssfshop.com/Maison-Kitsun%C3%A9/GM0020020352419/good?dspCtgryNo=SFMA42A04&brandShopNo=BDMA07A22&brndShopId=BQMKT&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A04$ref_brn:BDMA07A22$ref_br:BQMKT$set:1$$dpos:21
+output2) https://www.ssfshop.com/Maison-Kitsun%C3%A9/GM0020090887237/good?dspCtgryNo=SFMA42A05&brandShopNo=BDMA07A22&brndShopId=BQMKT&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A05$ref_brn:BDMA07A22$ref_br:BQMKT$set:1$$dpos:1
+output3) https://www.ssfshop.com/Maison-Kitsun%C3%A9/GM0020020352421/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A22&brndShopId=BQMKT&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A22$ref_br:BQMKT$set:1$$dpos:2
+output4) https://www.ssfshop.com/Maison-Kitsun%C3%A9/GM0020040920325/good?dspCtgryNo=SFMA42A05&brandShopNo=BDMA07A22&brndShopId=BQMKT&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A05$ref_brn:BDMA07A22$ref_br:BQMKT$set:1$$dpos:7
+output5) https://en.ssfshop.com/Maison-Kitsune/GM0020020352424/good?dspCtgryNo=SFMA42A01A03&brandShopNo=BDMA07A22&brndShopId=BQMKT&utag=ref_cnr:10705$dpos:1$ref_prd:GM0020020352423$lid:10002$mid:NCP_RECO$imid:20d12534-32d3-4856-bce8-a81dbea4fe70-20200918103222&abtag=$attr_recoType:$recoMdlNo:$segNo:out
+output6) https://en.ssfshop.com/Maison-Kitsun%C3%A9/GM0020042942197/good?utag=ref_sch:%20men%20%EC%95%84%EC%9A%B0%ED%84%B0$set:2$$dpos:14
+output7) https://en.ssfshop.com/CANADA-GOOSE/GM0020022170665/good?utag=ref_sch:men%20%EC%95%84%EC%9A%B0%ED%84%B0$set:2$$dpos:54
+output8) https://en.ssfshop.com/CANADA-GOOSE/GM0020031089939/good?utag=ref_sch:canada%20%EC%95%84%EC%9A%B0%ED%84%B0$set:1$$dpos:54
+output9) https://en.ssfshop.com/8seconds/GM0019121312642/good?dspCtgryNo=SFMA42A04A03&brandShopNo=&brndShopId=&utag=ref_cnr:10705$dpos:2$ref_prd:GPRT19111193097$lid:10002$mid:NCP_RECO$imid:c7c5c248-f8e7-4e80-b48b-d38f6eca94d1-20200918105515&abtag=$attr_recoType:$recoMdlNo:$segNo:out
+output10) https://en.ssfshop.com/8seconds/GM0020082445118/good?utag=ref_sch:%208seconds%20men%20%EC%B2%AD%EB%B0%94%EC%A7%80$set:1$$dpos:22
