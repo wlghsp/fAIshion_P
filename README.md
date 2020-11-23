@@ -12,35 +12,48 @@
 
 ### 모바일 화면
 
-![mobileHome](https://user-images.githubusercontent.com/68001045/99970157-cec5ef00-2dde-11eb-895a-e570e36d9187.png)
+<img width="415" alt="mobileHome" src="https://user-images.githubusercontent.com/68001045/99973260-ebfcbc80-2de2-11eb-9a6b-3e8f99229ce1.png">
 
-![mobileSignUp](https://user-images.githubusercontent.com/68001045/99970290-f3ba6200-2dde-11eb-8d5a-a80a370440ca.png)
+<br/>
+<img width="416" alt="mobileSignUp" src="https://user-images.githubusercontent.com/68001045/99973273-eef7ad00-2de2-11eb-8134-5b0d7a5b6322.png">
 
-![mobileSignIn](https://user-images.githubusercontent.com/68001045/99970370-0e8cd680-2ddf-11eb-89f2-f4305442171f.png)
+<br/>
+<img width="416" alt="mobileSignIn" src="https://user-images.githubusercontent.com/68001045/99973337-ffa82300-2de2-11eb-992b-52f234f2ee4d.png">
 
-![mobileSignInAfter](https://user-images.githubusercontent.com/68001045/99970378-12205d80-2ddf-11eb-9aa2-d39493d729a2.png)
+<br/>
+<img width="416" alt="mobileSignInAfter" src="https://user-images.githubusercontent.com/68001045/99973344-020a7d00-2de3-11eb-8082-dd526fe16eff.png">
 
-![mobileAddCloth](https://user-images.githubusercontent.com/68001045/99970470-39772a80-2ddf-11eb-8f56-b6a48dd8d428.png)
+<br/>
+<img width="415" alt="mobileAddCloth" src="https://user-images.githubusercontent.com/68001045/99973415-151d4d00-2de3-11eb-8ad9-f1ec38ddee55.png">
 
-![mobileCloset](https://user-images.githubusercontent.com/68001045/99970527-4b58cd80-2ddf-11eb-9516-89902c1e4afa.png)
+<br/>
+<img width="415" alt="mobileCloset" src="https://user-images.githubusercontent.com/68001045/99973425-18b0d400-2de3-11eb-9857-7b101e0a84ce.png">
 
-![mobileRecommand1](https://user-images.githubusercontent.com/68001045/99970914-d8038b80-2ddf-11eb-9ed4-52d607bcee66.png)
+<br/>
+<img width="413" alt="mobileRecommand" src="https://user-images.githubusercontent.com/68001045/99973522-2ebe9480-2de3-11eb-806a-3272e102a954.png">
 
-![mobileRecommand2](https://user-images.githubusercontent.com/68001045/99970967-ec478880-2ddf-11eb-8e93-0b1a667263f1.png)
+<br/>
+<img width="416" alt="mobileRecommand2" src="https://user-images.githubusercontent.com/68001045/99973543-32eab200-2de3-11eb-8f29-a7147b585784.png">
 
 ### 데스크탑 화면
 
-![deskHome](https://user-images.githubusercontent.com/68001045/99971047-05e8d000-2de0-11eb-8133-1b8ce5f4cf5a.png)
+<br/>
+<img width="1792" alt="deskCloset" src="https://user-images.githubusercontent.com/68001045/99973594-4564eb80-2de3-11eb-97f7-a1e2638496ef.png">
 
-![deskSignUp](https://user-images.githubusercontent.com/68001045/99971100-17ca7300-2de0-11eb-94bf-8f64064b7a8b.png)
+<br/>
+<img width="1792" alt="deskRecommand" src="https://user-images.githubusercontent.com/68001045/99973608-4a299f80-2de3-11eb-9818-e7cdb5ead50b.png">
 
-![deskSignIn](https://user-images.githubusercontent.com/68001045/99971166-29ac1600-2de0-11eb-977a-29f546e13fb0.png)
+<br/>
+<img width="1792" alt="deskSignIn" src="https://user-images.githubusercontent.com/68001045/99973610-4b5acc80-2de3-11eb-8f5a-a1894e5049f8.png">
 
-![deskSignInAfter](https://user-images.githubusercontent.com/68001045/99971243-41839a00-2de0-11eb-93f3-5f1f514beca9.png)
+<br/>
+<img width="1792" alt="deskSignInAfter" src="https://user-images.githubusercontent.com/68001045/99973613-4bf36300-2de3-11eb-9497-3d4a90eacf4f.png">
 
-![deskCloset](https://user-images.githubusercontent.com/68001045/99971318-595b1e00-2de0-11eb-9b68-b7ae56ad33b2.png)
+<br/>
+<img width="1792" alt="deskSignUp" src="https://user-images.githubusercontent.com/68001045/99973615-4c8bf980-2de3-11eb-99d8-04e148c142ab.png">
 
-![deskRecommand](https://user-images.githubusercontent.com/68001045/99971335-5e1fd200-2de0-11eb-882e-80fbee858b5a.png)
+<br/>
+<img width="1792" alt="deskHome" src="https://user-images.githubusercontent.com/68001045/99973619-4c8bf980-2de3-11eb-8251-a3c0a0511d25.png">
 
 ### 시연영상
 
