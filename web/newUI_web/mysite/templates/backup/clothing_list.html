@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  {% block content_header %}
+    <h2>옷장</h2>
+    <p>
+      <a href="{% url 'upload_clothing' %}" class="btn btn-primary">내 옷 추가</a>
+    </p>
+  {% endblock %}
+
+  <table class="table mb-0">
+    <thead>
+      <tr>
+        <th>옷 사진</th>
+        <th>옷 이름</th>
+        <th>코디 추천</th>
+        <th>삭제</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for clothing in clothings %}
+        <tr>
+          <td>
+            {% if clothing.image %}
+              <img src="{{ clothing.image.url }}" alt="{{ clothing.title }}" style="width:150px;">
+            {% else %}
+              <span class="text-muted">No Images</span>
+            {% endif %}
+          </td>
+          <td>{{ clothing.title }}</td>
+          <td>
+           <form method="post" action="{% url 'coordinate_clothing' clothing.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-info btn-sm">코디 추천 받기</button>
+            </form>
+          </td>
+          <td>
+            <form method="post" action="{% url 'delete_clothing' clothing.pk %}">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-danger btn-sm">삭제</button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
