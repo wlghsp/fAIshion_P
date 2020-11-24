@@ -1,0 +1,13 @@
+codi 1: jacket : https://www.ssfshop.com/Theory/GM0020082445139/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:10
+codi 2: jacket : https://www.ssfshop.com/Theory/GM0020033108794/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:17
+codi 3: jacket : https://www.ssfshop.com/Theory/GM0020031898261/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:29
+codi 4: pants : https://www.ssfshop.com/Theory/GM0020080731622/good?dspCtgryNo=SFMA42A04&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A04$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:14
+codi 5: pants : https://www.ssfshop.com/Theory/GM0020040312541/good?dspCtgryNo=SFMA42A04&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A04$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:34
+codi 6: pants : https://www.ssfshop.com/Theory/GM0020040817961/good?dspCtgryNo=SFMA42A04&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A04$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:59
+codi 7: pants : https://www.ssfshop.com/Theory/GM0020040818194/good?dspCtgryNo=SFMA42A04&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A04$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:60
+codi 8: jacket : https://www.ssfshop.com/Theory/GM0020021465028/good?dspCtgryNo=SFMA42A05&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A05$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:23
+codi 9: jacket :https://www.ssfshop.com/Theory/GM0020082041540/good?dspCtgryNo=SFMA32&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA32$ref_brn:BDMA07A30$ref_gtp:BST_CTGRY$ref_br:ECBTM$set:2$$dpos:12
+codi 10: jacket : https://www.ssfshop.com/Theory/GM0019120909137/good?dspCtgryNo=SFMA42A05&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A05$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:29
+codi 11: jacket : https://www.ssfshop.com/Theory/GM0020033108795/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:18
+
+output: https://www.ssfshop.com/Theory/GM0020061782343/good?dspCtgryNo=SFMA42A01&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A01$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:7

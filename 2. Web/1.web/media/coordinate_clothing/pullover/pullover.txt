@@ -1,0 +1,9 @@
+pullover input url : https://store.musinsa.com/app/product/detail/1548451/0
+
+codi1 coat : https://www.ssfshop.com/Theory/GM0019112805001/good?dspCtgryNo=SFMA42A05&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A05$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:24
+codi2 coat : https://www.ssfshop.com/Theory/GM0019120909137/good?dspCtgryNo=SFMA42A05&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A05$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:29#none;
+codi3 coat : https://www.ssfshop.com/Theory/GM0020021262322/good?dspCtgryNo=SFMA42A05&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A05$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:8
+codi4 jacket : https://www.ssfshop.com/Theory/GM0020033108796/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:21
+codi5 jacket : https://www.ssfshop.com/Theory/GM0020010827175/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:35
+codi6 pants : https://www.ssfshop.com/Theory/GM0019112804990/good?dspCtgryNo=SFMA42A04&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A04$ref_brn:BDMA07A30$ref_gtp:GNRL_CTGRY$ref_br:ECBTM$set:2$$dpos:32
+codi7 jacket : https://www.ssfshop.com/Theory/GM0019112805004/good?dspCtgryNo=SFMA42A19&brandShopNo=BDMA07A30&brndShopId=ECBTM&keyword=&leftBrandNM=&utag=ref_cat:SFMA42A19$ref_brn:BDMA07A30$ref_br:ECBTM$set:1$$dpos:40

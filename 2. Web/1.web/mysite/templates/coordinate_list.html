@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="card-title" style="display: inline-block">당신의&nbsp</h2>
+    <h2 style="font-weight: 600; color: red; display: inline-block">{{ clothing_kind }}</h2>
+    <h2 style="display: inline-block">와 어울리는 코디입니다.</h2>
+    <div id="container" style="display: flex; justify-content: center" >
+    {% for coordinateImage in coordinateImages %}
+        <div id="item" style="padding: 0 40px">
+            <div style="display: flex; flex-direction: column; margin: 30px 0 0 0">
+                <img alt="coordinate" src="{{ coordinateImage.c_image.url }}" style="width:220px; height: 300px;">
+                <div style="margin: 20px auto;">
+                    <a href="{{ coordinateImage.c_url }}" class="btn btn-dark btn-sm" target="_blank">상품 보러 가기</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
