@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/grid.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index_style.css' %}" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{% static 'js/closet.js' %}" defer></script>
+    <title>fAIshion_P</title>
+  </head>
+  <body>
+    <aside class="sign-up-aside">
+      <div class="sign-up-info">
+        <h1 class="sign-up-header">fAIshion_P 회원가입</h1>
+        {% if error.state %}
+        <h3>{{error.msg}}</h3>
+        {% endif %}
+        <form action="{% url 'signup' %}" method="post" class="sign-up-content">
+          {% csrf_token %}
+          <div class="content-item">
+            <label class="sign-up-content-label sr-only" for="name">이름: </label>
+            <input id="name" class="sign-up-content-input" type="text" name="name" placeholder="이름을 입력해주세요" />
+          </div>
+          <div class="content-item">
+            <label class="sign-up-content-label sr-only" for="id">아이디: </label>
+            <input id="id" class="sign-up-content-input" type="text" name="user_id" placeholder="아이디를 입력해주세요" />
+          </div>
+          <div class="content-item">
+            <label class="sign-up-content-label sr-only" for="password">비밀번호:</label>
+            <input id="password" class="sign-up-content-input" type="password" name="user_pw" placeholder="비밀번호를 입력해주세요" />
+          </div>
+          <div class="content-item last-content-item">
+            <label class="sign-up-content-label sr-only" for="password">비밀번호 확인:</label>
+            <input id="password_check" class="sign-up-content-input" type="password" name="user_pw_check" placeholder="비밀번호를 다시 입력해주세요" />
+          </div>
+          <div class="button-box">
+            <button class="fill-button" type="submit">회원가입</button>
+            <button class="fill-button exit-button sign-up-exit-button" type="button">나가기</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    <aside class="sign-in-aside">
+      <div class="sign-in-info">
+        <h1 class="sign-in-header">fAIshion_P 로그인</h1>
+        {% if error.state %}
+        <h3>{{error.msg}}</h3>
+        {% endif %}
+        <form class="sign-in-content" action="{% url 'login' %}" method="post">
+          {% csrf_token %}
+          <div class="content-item">
+            <label class="sign-in-content-label" for="sign-in-id">
+              <img src="{% static 'assets/id-icon.svg' %}" alt="id-icon" />
+            </label>
+            <input id="sign-in-id" class="sign-in-content-input" type="text" name="user_id" placeholder="아이디" />
+          </div>
+          <div class="content-item last-content-item">
+            <label class="sign-in-content-label" for="sign-in-password">
+              <img src="{% static 'assets/pw-icon.svg' %}" alt="password-icon" />
+            </label>
+            <input id="sign-in-password" class="sign-in-content-input" type="password" name="user_pw" placeholder="비밀번호" />
+          </div>
+          <div class="button-box">
+            <button type="submit" class="fill-button">로그인</button>
+            <button type="button" class="fill-button exit-button sign-in-exit-button">나가기</button>
+          </div>
+        </form>
+      </div>
+    </aside>
+
+    {% if user.is_authenticated %}
+    <section class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-content">
+              <h1 class="header-title">
+                {{user.username}}님을 위한
+                <br />
+                코디 추천서비스
+              </h1>
+              <p class="header-desc">
+                이제 머리 아파하지 마세요.
+                <br />
+                fAIshion_P와 함께라면 당신도 오늘부터 패피!!
+              </p>
+              <aside class="info-button-box" id="clothings_aside">
+                <a href="{% url 'add_clothing' %}">
+                  <button class="header-button fill-button" type="button" id="mycloset">내 옷 추가하러 가기</button>
+                </a>
+                <input id="mycloth-input" type="hidden" value="{{ request.session.user }}" />
+                <a href="{% url 'closet' %}">
+                  <button class="header-closet-button fill-button" type="button" id="mycloset">내 옷장으로 가기</button>
+                </a>
+                <a href="{% url 'logout' %}">
+                  <button class="logout-button fill-button" type="button">로그아웃</button>
+                </a>
+                <button class="sr-only signUp-button fill-button" type="button">회원가입</button>
+                <button class="sr-only signIn-button fill-button" type="button">로그인</button>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="add-clothing">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="add-clothing-upload">
+              <h1 class="add-clothing-upload-title">내 옷 추가하기</h1>
+              <form id="id_upload_form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="file-box">
+                  <input type="text" class="cloth-upload-name" value="파일선택" disabled="disabled" />
+                  <label class="cloth-input-file" for="cloth-input-file">업로드</label>
+                  <input id="cloth-input-file" class="cloth-input-file-hidden" type="file" name="image" />
+                  <input name="owner" type="hidden" value="{{ request.session.user }}" />
+                </div>
+                <span class="add-clothing-upload-span">이미지파일을 업로드 해주세요</span>
+                <button class="add-clothing-upload-button fill-button" type="submit">옷 추가하기</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closet add-clothing">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="add-clothing-box">
+              <h1 class="add-clothing-box-title">옷장</h1>
+              <span>코디 추천을 누르시면 해당 아이템의 코디를 추천해드려요.</span>
+              <dl class="add-clothing-box-content slide-list">
+                {% for clothing in clothings %}
+                <div class="add-clothing-box-content-item slide-content">
+                  <div class="add-clothing-box-content-image">
+                    <dt class="sr-only">옷 사진</dt>
+                    {% if clothing.image %}
+                    <dd>
+                      <img src="{{ clothing.image.url }}" alt="{{ clothing.image.url }}" />
+                    </dd>
+                    {% endif %}
+                  </div>
+                  <div class="add-clothing-box-content-buttons">
+                    <div>
+                      <dt class="sr-only">코디 추천하기</dt>
+                      <dd>
+                        <form method="post" action="{% url 'coordinate_clothing' clothing.pk %}">
+                          {% csrf_token %}
+                          <button class="add-clothing-box-button fill-button" type="submit">코디 추천</button>
+                        </form>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt class="sr-only">삭제하기</dt>
+                      <dd>
+                        <form method="post" action="{% url 'delete_clothing' clothing.pk %}">
+                          {% csrf_token %}
+                          <button class="delete-button fill-button" type="submit">삭제</button>
+                        </form>
+                      </dd>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% else %}
+
+    <section class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-content">
+              <h1 class="header-title">
+                fAIshion_P님을 위한
+                <br />
+                코디 추천서비스
+              </h1>
+              <p class="header-desc">
+                이제 머리 아파하지 마세요.
+                <br />
+                fAIshion_P와 함께라면 당신도 오늘부터 패피!!
+              </p>
+              <aside class="info-button-box">
+                <button class="signUp-button fill-button" type="button">회원가입</button>
+                <button class="signIn-button fill-button" type="button">로그인</button>
+              </aside>
+              <button class="header-button fill-button sr-only" type="button">내 옷 추가하러 가기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  </body>
+</html>
