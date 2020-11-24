@@ -1,0 +1,568 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1f2d3d;
+}
+
+/* Reset Css */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 11px;
+  border: none;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input {
+  min-width: 200px;
+  background-color: #f4f5f7;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.fill-button {
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 8px 20px;
+  background-color: #3030c4;
+  color: #fff;
+}
+
+.fill-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.exit-button {
+  color: #3030c4;
+  background-color: #fff;
+  margin-left: 10px;
+}
+
+.logout-button {
+  color: #3030c4;
+  background-color: #fff;
+  width: 187.2px;
+}
+
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+img {
+  display: block;
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.arrow-image {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* sign-up & sign-in modal */
+.sign-up-aside,
+.sign-in-aside {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sign-up-aside.active,
+.sign-in-aside.active {
+  display: flex;
+}
+
+.sign-up-info,
+.sign-in-info {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #f4f5f7;
+  padding: 30px 12px;
+}
+
+.sign-up-info {
+  width: 300px;
+  height: auto;
+}
+
+.sign-in-info {
+  width: 300px;
+  height: auto;
+}
+
+.sign-up-header,
+.sign-in-header {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.content-item {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.last-content-item {
+  margin-bottom: 20px;
+}
+
+.sign-in-content-label,
+.sign-up-content-label {
+  margin-right: 10px;
+}
+
+.sign-in-content-input,
+.sign-up-content-input {
+  /* width: 80%; */
+  flex-grow: 1;
+  border-bottom: 1px solid #666;
+  margin-bottom: 5px;
+  padding: 3px 5px;
+}
+
+.sign-in-content img {
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.button-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Header Section */
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  background-color: #fdded8;
+  text-align: center;
+}
+
+.header-title {
+  margin-bottom: 60px;
+  font-size: 32px;
+}
+
+.header-desc {
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.info-button-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-button-box button {
+  margin-bottom: 10px;
+}
+
+.info-sign-button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.signUp-button {
+  margin-right: 5px;
+}
+
+.signIn-button {
+  background-color: #fff;
+  color: #3030c4;
+  width: 90.2px;
+}
+
+.header-closet-button,
+.header-button {
+  width: 187.2px;
+}
+
+/* Add-clothing Section */
+.add-clothing {
+  background-color: #eff2f7;
+  padding: 80px 0;
+}
+
+.add-clothing-upload-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.cloth-input-file:hover {
+  opacity: 0.6;
+}
+
+.file-box {
+  margin-bottom: 3px;
+}
+
+.file-box label {
+  padding: 8px 20px;
+  color: #3030c4;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+.file-box input[type='file'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.file-box .cloth-upload-name {
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.add-clothing-box span,
+.recommand-section-span,
+.add-clothing-upload-span {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: #666;
+}
+
+.add-clothing-upload-button {
+  /* margin-bottom: 50px; */
+}
+
+.add-clothing-box-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.add-clothing-box-content {
+  display: flex;
+  align-items: center;
+}
+
+.add-clothing-box-content-image {
+  margin-bottom: 7px;
+}
+
+.add-clothing-box-content-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-clothing-box-button {
+  background-color: #fff;
+  color: #3030c4;
+}
+
+.delete-button {
+  background-color: #3030c4;
+}
+
+/* closet section */
+.closet {
+  background-color: #f4f5f7;
+}
+
+.add-clothing-box-content {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: center; */
+  width: 100%;
+}
+
+.add-clothing-box-content-item {
+  margin-bottom: 30px;
+}
+
+/* 옷장 이미지 slide 구현 */
+/* .slide-wrap {
+  position: relative;
+  width: 220px;
+  margin: auto;
+}
+
+.slide-box {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.slide-content {
+  display: table;
+  float: left;
+  width: 220px;
+}
+
+#arrow-image-left {
+  position: absolute;
+  top: 40%;
+  left: -40px;
+}
+
+#arrow-image-right {
+  position: absolute;
+  top: 40%;
+  right: -40px;
+}
+
+#arrow-image-left:hover,
+#arrow-image-right:hover {
+  cursor: pointer;
+  opacity: 0.6;
+} */
+
+/* recommand section */
+.recommand-section {
+  padding: 80px 0;
+}
+
+.recommand-section-title {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.recommand-card {
+  display: block;
+  padding: 24px 0 32px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
+  margin-bottom: 15px;
+}
+
+.recommand-card strong {
+  transition: color 300ms ease-in-out;
+}
+
+.recommand-card:hover {
+  background-color: #3141c5;
+  box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07);
+}
+
+.recommand-card:hover strong {
+  background-color: #3141c5;
+  box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07);
+  color: #fff;
+}
+
+.recommand-card img {
+  display: block;
+  width: auto;
+  /* heigh */
+  margin: 0 auto 16px;
+}
+
+.recommand-card strong {
+  color: #666;
+}
+/* >= 768 (Desktop) */
+@media screen and (min-width: 768px) {
+  /* Reset Css */
+  input {
+    font-size: 20px;
+    min-width: 260px;
+  }
+
+  /* modal section */
+  .sign-up-header,
+  .sign-in-header {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .sign-up-info,
+  .sign-in-info {
+    padding: 40px 25px;
+    width: 460px;
+    height: auto;
+  }
+
+  .content-item {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .last-content-item {
+    margin-bottom: 30px;
+  }
+
+  .sign-in-content-label,
+  .sign-up-content-label {
+    margin-right: 15px;
+  }
+
+  /* Header section */
+  .header-content {
+    height: 100vh;
+    padding: 120px 0;
+  }
+
+  .header-title {
+    font-size: 70px;
+    margin-bottom: 90px;
+  }
+
+  .header-desc {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+  }
+
+  .info-button-box {
+    margin-bottom: 16px;
+  }
+
+  .signUp-button {
+    font-size: 22px;
+    padding: 15px 30px;
+    margin-right: 15px;
+  }
+
+  .signIn-button {
+    font-size: 22px;
+    padding: 15px 30px;
+    width: 125.97px;
+  }
+
+  .header-closet-button,
+  .header-button {
+    font-size: 22px;
+    padding: 15px 30px;
+    width: 236.78px;
+  }
+
+  .logout-button {
+    font-size: 22px;
+    padding: 15px 30px;
+    width: 236.78px;
+  }
+
+  /* add-clothing section*/
+  .add-clothing-upload-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .add-clothing-upload-span {
+    margin-bottom: 20px;
+  }
+
+  .add-clothing-box-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .add-clothing-box-content-item {
+    display: flex;
+  }
+
+  .add-clothing-box-content-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  .add-clothing-box-button {
+    margin-bottom: 10px;
+  }
+
+  /* 옷장 이미지 slide 구현 */
+  /* .slide-wrap {
+    width: 330px;
+  }
+
+  .slide-content {
+    width: 330px;
+  } */
+
+  /* recommand-section */
+  .recommand-section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .add-clothing-box span,
+  .recommand-section-span,
+  .add-clothing-upload-span {
+    font-size: 13px;
+  }
+}
