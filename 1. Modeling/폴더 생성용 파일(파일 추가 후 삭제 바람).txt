@@ -1,0 +1,79 @@
+★최초 생성시
+# git init
+★작업 후 
+# git add .
+# git commit -m "프로젝트 시작"
+# git remote add origin 깃헙주소
+# git push origin master
+
+★최초생성자는 다른 팀원들의 깃허브아이디로 검색하여 Collaborator로 초대한다. 
+
+★다른 사람들은  원격저장소에서 내려받는다. 
+# git clone 깃헙주소  
+
+★각자 브랜치를 생성하여 작업 진행 
+# git branch 브랜치이름    // 브랜치 생성
+# git checkout 브랜치명    // 브랜치로 이동 
+(# git checkout -b 브랜치명    // 브랜치 생성 및 이동) 
+(# git branch -d 브랜치명 // 브랜치 삭제)
+(# git branch // 존재하는 브랜치 확인)
+
+★각자 브랜치에서 작업 후 
+# git add . 		// 변경 된 내용을 add 해줌 
+(# git status 		// add된 내용 확인 가능, 현재 상태 확인 가능 )
+# git commit -m "기능 구현 완료"
+(# git log  		// commit 기록 확인 가능하나 너무 길어짐. 빠져 나올때는 :q )
+(# git log --oneline  -10 // commit 코드 한줄로 확인 10개까지 본다. )
+# git push origin 브랜치명
+
+해당 깃허브로 가서 pull requests 확인하여 Compare&pull requests 클릭하여 변경 내용 확인 후 confirm 
+
+
+★원격저장소와 동기화 후 작업 진행  
+(git checkout master 할 필요 없음)
+# git pull origin master // 또는 git pull master
+ 
+
+★git add 취소하기 
+git reset HEAD [파일이름]   // 파일이름을 안 적으면 전체 취소
+
+★git push origin <자기브랜치>  까지 한 후(master 브랜치와 merge하기 전) reset 하기
+# git log --oneline  -10  // commit 코드 한줄로 확인 10개까지 본다. 
+# git reset --hard <돌아 가고 싶은 커밋번호>
+아직 master 브랜치와 merge를 하지 않아 git push -f origin master 필요 없음 . 
+
+
+★되돌리기 (reset, revert)-- 구글링 해서 자세한 내용 알아 보고 진행할 것
+Reset은 시계를 다시 맞추듯이 이력과 코드를 그 당시로 되돌리는 것
+Revert는 이전 이력은 그대로 두고, 그 되돌릴 커밋의 코드만 원복시킵니다
+# git log --oneline  -10 // commit 코드 한줄로 확인 10개까지 본다. 
+# git reset --hard <돌아 가고 싶은 커밋번호>
+(# git revert <되돌릴 커밋> ) 
+# git push -f origin master // 돌아간 커밋 상태를 강제로 푸시함. 
+
+
+★git pull 에러 해결 (Your local changes to the following files would be overwritten by merge )
+# git stash
+# git pull origin master
+# git stash pop 
+(# git stash && git pull origin master && git stash pop // 위 세줄 한번에 실행) 
+출처: https://goddaehee.tistory.com/253
+
+★ GitHub 100MB 이상 파일 업로드
+#git lfs를 설치해줍니다.
+git lfs install
+
+#""부분에 100MB이상 파일을 써주시면 됩니다.
+git lfs track "*.psd"
+
+#평소 git push 하는 것처럼 해주시면 됩니다.
+git add .
+git commit -m "Add design file"
+git push origin master
+
+
+
+
+★ gitignore 간단히 생성
+gitignore.io 라는 사이트에서 프레임워크 및 사용하고 있는 에디터, ide명을 적으면 자동으로 ignore할 목록이 작성된다.
+.gitignore에 이를 붙여 넣는다. .gitignore파일은  깃허브 디렉토리 최상단에 위치해야 한다. 
